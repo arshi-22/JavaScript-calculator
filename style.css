@@ -55,8 +55,8 @@ body {
 }
 @media (max-width: 768px) {
   .calculator-grid {
-    grid-template-columns: repeat(4, 50px);
-    grid-template-rows: minmax(50px, auto) repeat(5, 50px);
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 80px);
   }
   .calculator-grid > button {
     font-size: 1rem;
