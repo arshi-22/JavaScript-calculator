@@ -5,7 +5,6 @@
   border-radius: 1rem;
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
-  
 }
 body {
   padding: 0;
@@ -23,7 +22,7 @@ body {
 .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
-  border: 1px solid rgb(37, 35, 48);
+  border: 1px solid rgb(88, 79, 141);
   border-radius: 1rem;
   outline: none;
   background-color: rgba(41, 22, 63, 0.75);
@@ -53,4 +52,14 @@ body {
 .output .current-operand {
   color: rgba(215, 210, 210, 0.75);
   font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: minmax(50px, auto) repeat(5, 50px);
+  }
+  .calculator-grid > button {
+    font-size: 1rem;
+    border: 1px solid rgb(88, 79, 141);
+  }
 }
