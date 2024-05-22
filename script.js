@@ -8,7 +8,7 @@ class Calculator {
   clear() {
     this.currentOperand = "";
     this.previousOperand = "";
-    this.operation = "";
+    this.operation = undefined;
   }
 
   delete() {
@@ -52,8 +52,8 @@ class Calculator {
         return;
     }
     this.currentOperand = result;
-    this.operation = undefined;
     this.previousOperand = "";
+    this.operation = undefined;
   }
 
   getDisplayNumber(number) {
@@ -67,11 +67,11 @@ class Calculator {
       integerDisplay = integerDigits.toLocaleString("en", {
         maximumFractionDigits: 0,
       });
-      if (decimalDigit != null) {
-        return `${integerDisplay}.${decimalDigit}`;
-      } else {
-        return integerDisplay;
-      }
+    }
+    if (decimalDigit != null) {
+      return `${integerDisplay}.${decimalDigit}`;
+    } else {
+      return integerDisplay;
     }
   }
 
